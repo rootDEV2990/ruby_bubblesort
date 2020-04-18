@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 def bubble_sort_items(array)
   items_unsorted = true
   items_unsorted, array = sorting(array) while items_unsorted
