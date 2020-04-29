@@ -3,18 +3,16 @@ def bubble_sort(array)
   loop do
     swap = false
     (loop_size - 1).times do |i|
-      next unless array[i] > array[i + 1]
+      if array[i] > array[i + 1]
 
       array[i], array[i + 1] = array[i + 1], array[i]
       swap = true
+      end
     end
     break unless swap
   end
   array
 end
-
-input = [5, 3, 4, 9, 1, 8]
-p bubble_sort(input)
 
 def bubble_sort_by(array)
   loop_size = array.length
@@ -25,11 +23,17 @@ def bubble_sort_by(array)
 
       array[i], array[i + 1] = array[i + 1], array[i]
       swap = true
+      end
     end
     break unless swap
   end
   array
 end
 
+=begin test cases
+input = [5, 3, 4, 9, 1, 8]
+p bubble_sort(input)
+
 inp = [1, 3, 4, 5, 8, 9]
 p bubble_sort_by(inp) { |first, second| second - first }
+=end
